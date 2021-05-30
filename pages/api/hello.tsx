@@ -1,0 +1,11 @@
+import { NextApiRequest, NextApiResponse } from 'next';
+
+type Data = {
+  name: string;
+};
+
+const handler = (_req: NextApiRequest, res: NextApiResponse<Data>): void => {
+  res.status(200).json({ name: 'John Doe' });
+};
+
+export default handler;
